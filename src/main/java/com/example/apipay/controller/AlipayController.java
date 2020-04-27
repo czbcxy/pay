@@ -4,7 +4,7 @@ import com.alipay.api.AlipayApiException;
 import com.example.apipay.api.GeneralPayInterface;
 import com.example.apipay.dto.AliPayParams;
 import com.example.apipay.factory.PayClientFactory;
-import com.example.apipay.factory.VerifyException;
+import com.example.apipay.exception.VerifyException;
 import com.example.apipay.vo.TradeWapPayVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

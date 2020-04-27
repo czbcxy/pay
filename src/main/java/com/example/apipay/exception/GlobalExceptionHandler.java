@@ -1,7 +1,6 @@
 package com.example.apipay.exception;
 
 import com.alipay.api.AlipayApiException;
-import com.example.apipay.factory.VerifyException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
