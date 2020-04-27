@@ -1,0 +1,22 @@
+server:
+  port: 443
+  ssl:
+    key-store: server.keystore
+    key-alias: tomcat
+    enabled: true
+    key-store-type: JKS
+    key-password: 123456
+    key-store-password: 123456
+
+#支付宝参数
+alipay.01:
+  #    客户码
+  prodCode: "1231231231"
+  #  异步回调地址
+  notifyUrl: "http://xxxx.com/callback/syncCallback"
+  #  同步回调地址
+  returnUrl: "http://xxx.com/callback/syncCallback"
+  #  客户码
+  SellerId: "12312312312"
+  #  中途回调地址
+  QuitUrl: "http://www.alibaba.com"
