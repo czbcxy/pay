@@ -33,7 +33,7 @@ public class BaseService {
     @Value("${alipay.01.QuitUrl}")
     protected String QuitUrl;
 
-    protected AliPayParams buildParamsModel(AliPayParams params) {
+    protected AliPayParams buildPublicParamsModel(AliPayParams params) {
         //说明：商户网站唯一订单号
         params.setOut_trade_no(UUID.randomUUID().toString().toUpperCase());
         //说明：收款支付宝用户ID。 如果该值为空，则默认为商户签约账号对应的支付宝用户ID
@@ -46,7 +46,7 @@ public class BaseService {
     }
 
     @SneakyThrows
-    protected <T extends AlipayRequest> T buildRequestModel(Class<? extends AlipayRequest> request) {
+    protected <T extends AlipayRequest> T buildPublicRequestModel(Class<? extends AlipayRequest> request) {
         try {
             AlipayRequest reqeust = request.newInstance();
             reqeust.setProdCode(prodCode);

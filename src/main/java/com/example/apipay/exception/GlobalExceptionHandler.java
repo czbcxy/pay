@@ -16,7 +16,7 @@ import java.io.IOException;
  * @date 2020年04月27日18:49:34
  */
 @Slf4j
-@ControllerAdvice(basePackages = {"com.emplate.application.email.EmailDemo"})
+@ControllerAdvice(basePackages = {"com.example.apipay"})
 public class GlobalExceptionHandler {
 
     /**

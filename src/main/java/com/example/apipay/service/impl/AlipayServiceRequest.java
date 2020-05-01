@@ -16,7 +16,7 @@ public class AlipayServiceRequest extends AlipayAbstractService {
     @Override
     public String tradeWapPayRequest(AliPayParams params) throws AlipayApiException {
         //公共参数
-        params = super.buildParamsModel(params);
+        params = super.buildPublicParamsModel(params);
         //其他参数 todo
         //params.setExt_user_info(......);
         AlipayTradeWapPayResponse response = super.aliPaytradeWapPayRequest(params);
