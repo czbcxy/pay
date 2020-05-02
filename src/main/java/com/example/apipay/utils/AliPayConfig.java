@@ -19,13 +19,14 @@ import java.util.Properties;
 @Configurable
 public class AliPayConfig {
 
-    private static Properties           properties;
-    private static AlipayClient         client          =       null;
+    private static Properties   properties;
+    private static AlipayClient client = null;
+
     static {
         properties = new Properties();
-        Config load     =   ConfigFactory.load();
-        String env      =   load.getString("dev");
-        Config load1    =   ConfigFactory.load(env);
+        Config load  = ConfigFactory.load();
+        String env   = load.getString("dev");
+        Config load1 = ConfigFactory.load(env);
         properties.put("serverUrl", load1.getConfig("alipay").getString("serverUrl"));
         properties.put("appId", load1.getConfig("alipay").getString("appId"));
         properties.put("privateKey", load1.getConfig("alipay").getString("privateKey"));
@@ -33,7 +34,7 @@ public class AliPayConfig {
         properties.put("charset", load1.getConfig("alipay").getString("charset"));
         properties.put("alipayPublicKey", load1.getConfig("alipay").getString("alipayPublicKey"));
         properties.put("signType", load1.getConfig("alipay").getString("signType"));
-        log.info("alipay param init successful" + properties.get("serverUrl") );
+        log.info("alipay param init successful" + properties.get("serverUrl"));
     }
 
 

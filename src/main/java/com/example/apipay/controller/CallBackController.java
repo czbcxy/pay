@@ -17,8 +17,8 @@ public class CallBackController {
     @ResponseBody
     public String syncCallback(HttpServletRequest dto) {
         Map<String, String[]> parameterMap = dto.getParameterMap();
-        String jsonString = JSON.toJSONString(parameterMap);
-        CallBackDTO callBackDTO = JSON.parseObject(jsonString, CallBackDTO.class);
+        String                jsonString   = JSON.toJSONString(parameterMap);
+        CallBackDTO           callBackDTO  = JSON.parseObject(jsonString, CallBackDTO.class);
         //同步回调 todo 利用订单id，查询数据库刚才支付的信息，更新支付详情、、、、
         String username = dto.getParameter("out_trade_no");
         String password = dto.getParameter("total_amount");
@@ -38,8 +38,8 @@ public class CallBackController {
     @ResponseBody
     public void asyncCallback(HttpServletRequest dto) {
         Map<String, String[]> parameterMap = dto.getParameterMap();
-        String jsonString = JSON.toJSONString(parameterMap);
-        CallBackDTO callBackDTO = JSON.parseObject(jsonString, CallBackDTO.class);
+        String                jsonString   = JSON.toJSONString(parameterMap);
+        CallBackDTO           callBackDTO  = JSON.parseObject(jsonString, CallBackDTO.class);
         //异步回调 todo 利用订单id，查询数据库刚才支付的信息，更新支付详情、、、、
     }
 }

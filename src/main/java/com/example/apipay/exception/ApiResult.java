@@ -16,8 +16,8 @@ import org.springframework.http.HttpStatus;
 public class ApiResult<T> {
 
     private Integer code;
-    private String msg;
-    private T data;
+    private String  msg;
+    private T       data;
 
     public static ApiResult success(Object data) {
         return new ApiResult().setCode(HttpStatus.OK.value()).setData(data);

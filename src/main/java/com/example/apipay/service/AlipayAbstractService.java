@@ -24,7 +24,7 @@ public abstract class AlipayAbstractService extends
     public AlipayTradeWapPayResponse aliPaytradeWapPayRequest(AliPayParams params) throws AlipayApiException {
         AlipayTradeWapPayRequest alipayRequest = super.buildPublicRequestModel(AlipayTradeWapPayRequest.class);
         alipayRequest.setBizContent(JSON.toJSONString(params));
-        AlipayTradeWapPayResponse response =  alipayClient.pageExecute(alipayRequest);
+        AlipayTradeWapPayResponse response = alipayClient.pageExecute(alipayRequest);
         return response;
     }
 

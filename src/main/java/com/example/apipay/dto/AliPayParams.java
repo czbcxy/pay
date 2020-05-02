@@ -10,12 +10,12 @@ import java.io.Serializable;
 @Data
 public class AliPayParams implements Serializable {
 
-    private static final long serialVersionUID = -4175631062830127075L;
+    private static final long   serialVersionUID = -4175631062830127075L;
     /**
      * 必填项
      */
     //说明：商品的标题/交易标题/订单标题/订单关键字等。
-    private String subject;
+    private              String subject;
 
     //说明：商户网站唯一订单号
     private String out_trade_no;

@@ -22,7 +22,7 @@ public class AlipayController {
     @ResponseBody
     public String tradeWapPay(TradeWapPayVO vo) throws AlipayApiException, VerifyException {
         AliPayParams params = new AliPayParams();
-        BeanUtils.copyProperties(vo,params);
+        BeanUtils.copyProperties(vo, params);
         GeneralPayInterface alipay = PayClientFactory.getInstance(vo.getType());
         return alipay.tradeWapPayRequest(params);
     }
